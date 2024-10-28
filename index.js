@@ -18,6 +18,7 @@ function runPythonScript(scriptPath, args, callback) {
 	pythonProcess.on("close", (code) => {
 		if (code !== 0) {
 			callback(`Error: Script exited with code ${code}`, null);
+			console.log(data);
 		} else {
 			callback(null, data);
 		}
