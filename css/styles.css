@@ -9,13 +9,13 @@ body {
 }
 
 .tagbutton {
-	width: 20%;
+	width: 15%;
 	border: 10px solid white;
 	border-radius: 5%;
 }
 
 .tag {
-	width: 20%;
+	width: 15%;
 	text-align: center;
 }
 

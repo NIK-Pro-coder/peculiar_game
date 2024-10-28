@@ -29,8 +29,14 @@ async function loadTags() {
 	let imgtag1 = document.getElementById("imgtag1");
 	let imgtag2 = document.getElementById("imgtag2");
 
-	let img1 = (await postBy(`${basetag}+${tag1.tag}`))[0];
-	let img2 = (await postBy(`${basetag}+${tag2.tag}`))[0];
+	imgtag1.src = "#";
+	imgtag2.src = "#";
+
+	let imgs1 = await postBy(`${basetag}+${tag1.tag}`);
+	let imgs2 = await postBy(`${basetag}+${tag2.tag}`);
+
+	let img1 = imgs1[Math.floor(Math.random() * imgs1.length)];
+	let img2 = imgs2[Math.floor(Math.random() * imgs2.length)];
 
 	imgtag1.src = img1.preview_url;
 	imgtag2.src = img2.preview_url;
