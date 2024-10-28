@@ -9,7 +9,7 @@ def get(url) :
 	if r.ok :
 		return json.loads(r.text)
 
-	exit()
+	exit(1)
 
 def getbytag(tag) :
 	return get(
