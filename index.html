@@ -24,18 +24,28 @@
 				<h3 id="scoreNum">Score 0</h3>
 			</div>
 			<div class="tagcontainer">
-				<button class="tagbutton" id="tag1" onclick="tryTag(1)">
-					Tag 1
-				</button>
-				<button class="tagbutton" id="tag2" onclick="tryTag(2)">
-					Tag 2
-				</button>
+				<p id="tag1" class="tag">Tag 1</p>
+				<p id="tag2" class="tag">Tag 2</p>
+			</div>
+			<div class="tagcontainer">
+				<img
+					src="#"
+					class="tagbutton"
+					id="imgtag1"
+					onclick="tryTag(1)"
+					alt="An image you would not want to see"
+				/>
+				<img
+					src="#"
+					class="tagbutton"
+					id="imgtag2"
+					onclick="tryTag(2)"
+					alt="An image you would not want to see"
+				/>
 			</div>
 			<br />
 			<div class="tagcontainer hidden" id="posts">
-				<p class="tagposts" id="post1">n posts</p>
 				<button onclick="next()">Continue</button>
-				<p class="tagposts" id="post2">n posts</p>
 			</div>
 		</div>
 	</body>

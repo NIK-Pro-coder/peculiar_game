@@ -9,8 +9,14 @@ body {
 }
 
 .tagbutton {
-	width: 40%;
-	height: 10em;
+	width: 20%;
+	border: 10px solid white;
+	border-radius: 5%;
+}
+
+.tag {
+	width: 20%;
+	text-align: center;
 }
 
 .tagcontainer {
@@ -23,16 +29,13 @@ body {
 }
 
 .correct {
-	color: white;
-	background: green;
+	border: 10px solid green;
 }
 
 .wrong {
-	color: white;
-	background: red;
+	border: 10px solid red;
 }
 
 .equal {
-	color: wite;
-	background: yellow;
+	border: 10px solid yellow;
 }
