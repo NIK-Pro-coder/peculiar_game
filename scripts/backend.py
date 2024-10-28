@@ -6,7 +6,8 @@ commands = {}
 
 def get(url) :
 	r = requests.get(url)
-	return json.loads(r.text)
+	if r.ok :
+		return json.loads(r.text)
 
 def getbytag(tag) :
 	return get(
