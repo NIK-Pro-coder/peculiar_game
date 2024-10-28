@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script src="scripts/index.js"></script>
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Rule34 Higher or Lower!</title>
+	</head>
+	<body>
+		<div class="title">
+			<h1 class="shown">Rule34 Higher or Lower!</h1>
+		</div>
+
+		<div class="title">
+			<label for="tag">Parent Tag</label>
+			<input id="tag" placeholder="Eg pokemon" />
+
+			<br />
+
+			<button onclick="start()" id="start">Go!</button>
+		</div>
+
+		<div style="display: none" class="game">
+			<div class="tagcontainer">
+				<h3 id="roundNum">Round 0</h3>
+				<h3 id="scoreNum">Score 0</h3>
+			</div>
+			<div class="tagcontainer">
+				<button class="tagbutton" id="tag1" onclick="tryTag(1)">
+					Tag 1
+				</button>
+				<button class="tagbutton" id="tag2" onclick="tryTag(2)">
+					Tag 2
+				</button>
+			</div>
+			<br />
+			<div class="tagcontainer hidden" id="posts">
+				<p class="tagposts" id="post1">n posts</p>
+				<button onclick="next()">Continue</button>
+				<p class="tagposts" id="post2">n posts</p>
+			</div>
+		</div>
+	</body>
+</html>

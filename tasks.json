@@ -1,0 +1,15 @@
+{
+	"tests": [
+		{
+			"name": "Verifica Fisica",
+			"when": "10:00 08-07-2024"
+		}
+	],
+	"homework": [
+		{
+			"name": "Compiti Inglese",
+			"due": "8:00 10-07-2024",
+			"esercizi": "es 10 pag 128"
+		}
+	]
+}

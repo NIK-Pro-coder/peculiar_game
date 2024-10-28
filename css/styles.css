@@ -1,0 +1,38 @@
+body {
+	background: #aae5a4;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tagbutton {
+	width: 40%;
+	height: 10em;
+}
+
+.tagcontainer {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.hidden {
+	display: none;
+}
+
+.correct {
+	color: white;
+	background: green;
+}
+
+.wrong {
+	color: white;
+	background: red;
+}
+
+.equal {
+	color: wite;
+	background: yellow;
+}
