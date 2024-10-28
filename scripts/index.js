@@ -43,10 +43,35 @@ function randomProperty(obj) {
 async function start() {
 	const tag = document.getElementById("tag").value;
 
-	const data = await fetch(`/bytag/${tag}`);
+	const url = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&tags=${tag}&json=1&limit=1000`;
+	const data = await fetch(url);
 	const posts = await data.json();
 
-	giventags = posts;
+	let child = {};
+
+	for (let i = 0; i < posts.length; i++) {
+		let p = posts[i];
+
+		const tags = p.tags.split(" ");
+
+		for (let k = 0; k < tags.length; k++) {
+			let t = tags[k];
+			if (t in child) {
+				child[t]++;
+			} else {
+				child[t] = 1;
+			}
+		}
+	}
+
+	let actual = {};
+	for (let i in child) {
+		if (child[i] >= 5) {
+			actual[i] = child[i];
+		}
+	}
+
+	giventags = actual;
 
 	let children = document.body.children;
 	for (let i = 1; i < children.length; i++) {
@@ -69,7 +94,6 @@ function tryTag(num) {
 	document.getElementById("posts").classList.toggle("hidden");
 
 	revealed = true;
-	console.log(num);
 
 	let buttontag1 = document.getElementById("tag1");
 	let buttontag2 = document.getElementById("tag2");
