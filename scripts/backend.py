@@ -9,6 +9,8 @@ def get(url) :
 	if r.ok :
 		return json.loads(r.text)
 
+	exit()
+
 def getbytag(tag) :
 	return get(
 		f"https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&tags={tag}&json=1&limit=1000"
