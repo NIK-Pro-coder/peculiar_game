@@ -4,6 +4,8 @@ const { spawn } = require("child_process");
 const fs = require("fs");
 
 function runPythonScript(scriptPath, args, callback) {
+	console.log(`Running ${scriptPath} with args ${args}`);
+
 	const pythonProcess = spawn("python", [scriptPath].concat(args));
 
 	let data = "";
@@ -18,9 +20,11 @@ function runPythonScript(scriptPath, args, callback) {
 	pythonProcess.on("close", (code) => {
 		if (code !== 0) {
 			callback(`Error: Script exited with code ${code}`, null);
+			console.log(`Error: Script exited with code ${code}`);
 			console.log(data);
 		} else {
 			callback(null, data);
+			console.log("Script exited succesfully");
 		}
 	});
 }
