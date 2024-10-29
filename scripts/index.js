@@ -29,9 +29,6 @@ async function loadTags() {
 	let imgtag1 = document.getElementById("imgtag1");
 	let imgtag2 = document.getElementById("imgtag2");
 
-	imgtag1.src = "#";
-	imgtag2.src = "#";
-
 	let imgs1 = await postBy(`${basetag}+${tag1.tag}`);
 	let imgs2 = await postBy(`${basetag}+${tag2.tag}`);
 
@@ -149,6 +146,12 @@ function tryTag(num) {
 
 function next() {
 	if (!revealed) return;
+
+	let imgtag1 = document.getElementById("imgtag1");
+	let imgtag2 = document.getElementById("imgtag2");
+
+	imgtag1.src = "#";
+	imgtag2.src = "#";
 
 	document.getElementById("posts").classList.toggle("hidden");
 	loadTags();
